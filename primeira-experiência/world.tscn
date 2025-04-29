@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3matytc6opvd"]
+
+[ext_resource type="PackedScene" uid="uid://b1dbsauea0ry" path="res://box_bouncy.tscn" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://dawknsyxws7us" path="res://game_manager.gd" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://capc43ogjj6e1" path="res://objects/box_regular.tscn" id="2_tlwt5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gv5m4"]
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sb7"]
+size = Vector2(953, 38.5)
+
+[node name="world" type="Node2D"]
+position = Vector2(93, 50)
+metadata/_edit_horizontal_guides_ = [-181.0]
+
+[node name="game_manager" type="Node" parent="."]
+script = ExtResource("1_tlwt5")
+object_templates = Array[PackedScene]([ExtResource("1_fj7yv"), ExtResource("2_tlwt5")])
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 32.0
+offset_top = 7.0
+offset_right = 985.0
+offset_bottom = 457.0
+color = Color(0.314743, 0.560887, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 31.0
+offset_top = 420.0
+offset_right = 983.0
+offset_bottom = 456.0
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 4)
+physics_material_override = SubResource("PhysicsMaterial_gv5m4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(509, 434.25)
+rotation = -0.00269756
+shape = SubResource("RectangleShape2D_f3sb7")
+
+[node name="box_bouncy" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(273, 92)
+
+[node name="box_bouncy2" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(409, 67)
+
+[node name="box_bouncy3" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(374, 235)
+
+[node name="box_bouncy4" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(544, 95)
+
+[node name="box_bouncy5" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(521, 184)
+
+[node name="box_bouncy6" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(703, 65)
+
+[node name="box_regular" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(346, 157)
+
+[node name="box_regular2" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(468, 120)
+
+[node name="box_regular3" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(321, 46)
+
+[node name="box_regular4" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(576, 187)
+
+[node name="box_regular5" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(640, 108)
+
+[node name="box_regular6" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(434, 187)
+
+[node name="box_regular7" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(434, 264)
+
+[node name="box_bouncy7" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(494, 235)
+
+[node name="box_bouncy8" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(705, 182)
+
+[node name="box_regular8" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(503, 37)
+
+[node name="box_regular9" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(611, 21)
+
+[node name="box_bouncy9" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(562, 244)
