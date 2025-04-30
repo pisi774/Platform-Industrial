@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d38pfd60oa3xg"
-path="res://.godot/imported/clouds_2.png-e63947e0b32299bfbcfe21a86551cd66.ctex"
+uid="uid://dflxayfyjjhqp"
+path="res://.godot/imported/birds.png-c0de8f0ec07150d7fd1655af64750edf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets-godot/Free-Horizontal-Game-Backgrounds/PNG/game_background_2/layers/clouds_2.png"
-dest_files=["res://.godot/imported/clouds_2.png-e63947e0b32299bfbcfe21a86551cd66.ctex"]
+source_file="res://assets/assets-godot/Free-Horizontal-Game-Backgrounds/PNG/game_background_1/layers/game_background_2/layers/birds.png"
+dest_files=["res://.godot/imported/birds.png-c0de8f0ec07150d7fd1655af64750edf.ctex"]
 
 [params]
 

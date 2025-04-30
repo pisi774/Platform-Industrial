@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2k4g5c3lpxr"
-path="res://.godot/imported/clouds_1.png-8698fdbef696785796fc25ce56aadd79.ctex"
+uid="uid://di02jswfckdec"
+path="res://.godot/imported/sky.png-32a264f388bc36309f66e866a106d856.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets-godot/Free-Horizontal-Game-Backgrounds/PNG/game_background_2/layers/clouds_1.png"
-dest_files=["res://.godot/imported/clouds_1.png-8698fdbef696785796fc25ce56aadd79.ctex"]
+source_file="res://assets/assets-godot/Free-Horizontal-Game-Backgrounds/PNG/game_background_1/layers/game_background_2/layers/sky.png"
+dest_files=["res://.godot/imported/sky.png-32a264f388bc36309f66e866a106d856.ctex"]
 
 [params]
 
