@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://cv8aq7viu4sn"]
+
+[ext_resource type="Texture2D" uid="uid://b4d1ebbw1t4ou" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://3qjlx4pimwyf" path="res://player/player.gd" id="1_rkbax"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
+radius = 21.0
+height = 88.0
+
+[sub_resource type="Animation" id="Animation_oul6g"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rkbax"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g1dw6"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1), Vector2i(4, 1), Vector2i(5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g1dw6"]
+_data = {
+&"RESET": SubResource("Animation_rkbax"),
+&"idle": SubResource("Animation_oul6g"),
+&"run": SubResource("Animation_g1dw6")
+}
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(113, 138)
+script = ExtResource("1_rkbax")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -38)
+scale = Vector2(1.07509, 1.35807)
+texture = ExtResource("1_oul6g")
+hframes = 6
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -36)
+shape = SubResource("CapsuleShape2D_rkbax")
+debug_color = Color(0, 0.595, 0.7, 0.137255)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g1dw6")
+}
