@@ -5,14 +5,14 @@ extends CharacterBody2D
 
 var is_running: bool = false
 
-#func _process(delta: float) -> void:
-	#if Input.is_action_just_pressed("ui_accept"):
-		#if is_running:
-			#animation_player.play("idle")
-			#is_running = false
-		#else:
-			#animation_player.play("run")
-			#is_running = true
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		if is_running:
+			animation_player.play("idle")
+			is_running = false
+		else:
+			animation_player.play("run")
+			is_running = true
 
 func _physics_process(delta: float) -> void:
 	var input_vector = Input.get_vector("mover_esquerda","mover_direita","mover_cima","mover_baixo")
